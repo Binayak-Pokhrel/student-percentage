@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Information</title>
+        <style>
+            #bdy1{
+                border: 1px solid black;
+            }
+            label,input{
+                padding: 40;
+                margin: 40;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <header><h1>Student Information</h1></header>
+
+        <section>
+            <!--Table of< the student information-->
+            <article id="bdy1">
+
+                <tr>
+                    <label>Student Name: </label>
+                    <input type="text" id="nm">
+                </tr>
+                <br>
+
+                <tr>
+                  <label>Student Number: </label>
+                  <input type="text" id="numb">
+                </tr>
+
+                <br>
+                <tr>
+                    <lab<el>Group: </label>
+                    <input type="text" id="grp">
+                </tr>
+                <br>
+                <tr>
+                    <label>Marks in maths: </label>
+                    <input type="text" id="math">
+                </tr>
+                <br>
+                <tr>
+                    <label>Marks in science: </label>
+                    <input type="text" id="science">
+                </tr>
+                <br>
+                <tr>
+                    <label>Marks in english: </label>
+                    <input type="text" id="eng">
+                </tr>
+                <br>
+                <tr>
+                    <label>Marks in computer: </label>
+                    <input type="text" id="comp">
+                </tr>
+                <br>
+                <tr>
+                    <label>Marks in nepali :</label>
+                    <input type="text" id="nep">
+                </tr>
+
+            </article>
+            <br>
+            <article>
+                <button onclick="report()">Generate Report</button>
+            </article>
+
+            <p id="name1"></p>
+            <br>
+            <p id="numb1"></p>
+            <br>
+            <p id="grp1"></p>
+            <br>
+            <p id="average"></p>
+        </section>
+        
+        <script>
+            function report(){
+                var a = document.getElementById('nm').value;
+                var b=  document.getElementById('numb').value;
+                var c = document.getElementById('grp').value;
+                var d = document.getElementById('math').value;
+                var e = document.getElementById('science').value;
+                var f = document.getElementById('eng').value;
+                var g = document.getElementById('comp').value;
+                var h = document.getElementById('nep').value;
+                
+                var i = document.getElementById('name1');
+                i.innerHTML = "Student-Name: "+a;
+
+                var j = document.getElementById('numb1');
+                j.innerHTML = "Number: "+b;
+
+                var k = document.getElementById('grp1');
+                k.innerHTML = "Group: "+ c;
+
+                var l = document.getElementById('average');
+                l.innerHTML= "Percentage: "+(((d+e+f+g+h)/500)*100)+"%";
+            }
+        </script>
+
+        <footer></footer>
+    </body>
+
+</html>
